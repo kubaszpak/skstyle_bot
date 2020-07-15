@@ -6,8 +6,8 @@ authors = ["kubaszpak <jakub.szpak.it@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
-selenium = "^3.141.0"
 pytest = "^5.4.3"
+selenium = "^3.141.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"

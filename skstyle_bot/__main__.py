@@ -1,10 +1,11 @@
-from selenium import webdriver
 from pathlib import Path
 from time import sleep
+from selenium import webdriver
 import os
 
 class Skstyle:
     def __init__(self,username,password):
+        
         chrome_options = webdriver.ChromeOptions()
         chrome_options.add_argument("--incognito")
         chrome_options.add_experimental_option("detach", True)

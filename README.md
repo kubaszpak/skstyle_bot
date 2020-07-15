@@ -25,4 +25,6 @@ There is a great tutorial for that I found on YouTube (again if you are using Wi
 
 https://www.youtube.com/watch?v=dz59GsdvUF8&t=1s
 
+ - run **poetry install --no-dev**
+
  - run project with **poetry run main**

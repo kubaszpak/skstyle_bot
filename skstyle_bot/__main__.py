@@ -1,6 +1,7 @@
 from pathlib import Path
 from time import sleep
 from selenium import webdriver
+# from skstyle_bot import secrets
 import os
 
 class Skstyle:
@@ -46,7 +47,7 @@ class Skstyle:
         
 
     def is_there_new_order(self):
-        data_folder = Path('project/')
+        data_folder = Path('skstyle_bot/')
         file_to_open = data_folder / 'last_order.txt'
         if(file_to_open.is_file() and os.stat(file_to_open).st_size != 0):
             f = open(file_to_open, "r")
@@ -66,10 +67,20 @@ class Skstyle:
             return None, latest_order
 
     def handle_orders(self,last_printed_order,latest_order):
-        print(last_printed_order,latest_order)
+        order_section = self.driver.find_element_by_xpath("/html/body/div[2]/form[2]/section[1]/div[2]")
+        orders = order_section.find_elements_by_xpath("//div[@class='row new']")
+        orders_to_print = {}
+        for order in orders:
+            order_number = int(order.find_element_by_xpath("//div[@class='widthId']").text)
+            if(order_number >= last_printed_order and order_number < latest_order):
+                orders_to_print[order_number]=order
+        print(orders_to_print)
+
+
 
 def main():
     my_bot = Skstyle(input("Your login: "),input("Your password: "))
+    # my_bot = Skstyle(secrets.username,secrets.password)
     last_printed_order,latest_order = my_bot.is_there_new_order()
     if(last_printed_order!=None):
         my_bot.handle_orders(last_printed_order,latest_order)

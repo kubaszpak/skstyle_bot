@@ -2,7 +2,7 @@
 Python Bot for sstore domain webshops admin panel
 
 ---
-**Version 1.0.2**
+**Version 1.0.3**
 ---
 
 ## Purpose
@@ -25,4 +25,4 @@ There is a great tutorial for that I found on YouTube (again if you are using Wi
 
 https://www.youtube.com/watch?v=dz59GsdvUF8&t=1s
 
- - run project with poetry *poetry run python -u poetry-demo\\__main\__.py*
+ - run project with **poetry run main**

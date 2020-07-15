@@ -5,7 +5,6 @@ import os
 
 class Skstyle:
     def __init__(self,username,password):
-        
         chrome_options = webdriver.ChromeOptions()
         chrome_options.add_argument("--incognito")
         chrome_options.add_experimental_option("detach", True)
@@ -68,9 +67,10 @@ class Skstyle:
 
     def handle_orders(self,last_printed_order,latest_order):
         print(last_printed_order,latest_order)
-        
-if __name__ == "__main__":
+
+def main():
     my_bot = Skstyle(input("Your login: "),input("Your password: "))
     last_printed_order,latest_order = my_bot.is_there_new_order()
     if(last_printed_order!=None):
         my_bot.handle_orders(last_printed_order,latest_order)
+

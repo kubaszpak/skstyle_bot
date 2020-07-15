@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "poetry-demo"
+name = "skstyle_bot"
 version = "0.1.0"
 description = ""
 authors = ["kubaszpak <jakub.szpak.it@gmail.com>"]
@@ -16,3 +16,6 @@ pylint = "^2.5.3"
 [build-system]
 requires = ["poetry>=0.12"]
 build-backend = "poetry.masonry.api"
+
+[tool.poetry.scripts]
+main  = "skstyle_bot.__main__:main"

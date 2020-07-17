@@ -1,4 +1,4 @@
-# sktyle_bot
+# skstyle_bot
 Python Bot for sstore domain webshops admin panel
 
 ---

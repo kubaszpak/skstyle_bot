@@ -89,7 +89,7 @@ def order_to_file(order,domain):
 
 def main():
     driver = Skstyle(input("Your login: "),input("Your password: "),input("Your domain: "))
-    # driver = Skstyle(secrets.username,secrets.password)
+    # driver = Skstyle(secrets.username,secrets.password,secrets.domain)
     last_printed_order = driver.is_there_new_order()
     if(last_printed_order!=None):
         driver.handle_orders(last_printed_order)

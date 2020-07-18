@@ -1,0 +1,31 @@
+Here I pasted in all commented code from main to use in the future:
+
+Maximized window : go to order section 
+try:
+    self.driver.find_element_by_xpath("/html/body/header/nav/div/div[1]/ul/li[2]/a").click()
+except Exception:
+Minimized window (mobile layout) : go to order section
+    try:
+        # this part lets you change the size of window while the script is on
+        fa_fa_bars = self.driver.find_element_by_xpath("/html/body/header/nav/ul/li[2]/a")
+        fa_fa_bars.click()
+        sleep(1)
+        orders_and_clients = fa_fa_bars.find_element_by_xpath("/html/body/header/nav/div/div[1]/ul/li[2]/a/span[2]")
+        orders_and_clients.click()
+        sleep(1)
+        orders = orders_and_clients.find_element_by_xpath("/html/body/header/nav/div/div[1]/ul/li[2]/ul/li[1]/a/span")
+        orders.click()
+        sleep(1)
+        orders_list = orders.find_element_by_xpath("/html/body/header/nav/div/div[1]/ul/li[2]/ul/li[1]/ul/li[1]/a")
+        orders_list.click()
+        sleep(1)
+    except selenium.common.exceptions.ElementNotInteractableException:
+        # but you can also achieve the same effect with 
+        # it is an ugly way of doing the same thing
+        # this is what I used beacuse it always works
+        self.driver.get(f"https://{domain}/admin/orders.php")
+
+Order finding
+ order_section = self.driver.find_element_by_xpath("/html/body/div[2]/form[2]/section[1]/div[2]")
+            orders = order_section.find_elements_by_xpath("./div[starts-with(@class,'row ')]")
+            for order in orders:

@@ -129,7 +129,7 @@ dmypy.json
 .pyre/
 
 # secret file
-skstyle_bot/secrets.py
+skstyle_bot/secrets.json
 
 #last order
 skstyle_bot/last_order.txt

@@ -19,3 +19,4 @@ build-backend = "poetry.masonry.api"
 
 [tool.poetry.scripts]
 main  = "skstyle_bot.__main__:main"
+set_data = "skstyle_bot.data_manager:change_data"

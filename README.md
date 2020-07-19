@@ -2,14 +2,13 @@
 Python Bot for sstore domain webshops admin panel
 
 ---
-**Version 1.0.3**
+**Version 1.0.4**
 ---
+It works on sstore version 4.9.3
 
 ## Purpose
 
-Its main feature is storaging new orders in a file and every couple of hours sending new client's addresses to put on a package
-
-It's still work in progress
+Its main feature is storaging new orders in a file and every couple of hours sending an email with new clients' address stickers to put directly on a package
 
 ## Usage
 
@@ -27,4 +26,17 @@ https://www.youtube.com/watch?v=dz59GsdvUF8&t=1s
 
  - run **poetry install --no-dev**
 
+ When you run it for the first time the program will ask you for your data and store it in secrets.json
+ Every next time the program will read data from this file
+
  - run project with **poetry run main**
+
+ If you have misspelled something you can change the data with
+
+ - **poetry run set_data**
+
+---
+## Description
+Running the program for the first time creates a new file called lastorder.txt and exits
+Every next usage it will do the same but also if it detects that any new orders have been added to the list
+it will email you the data of them such as clients information and shipment information

@@ -24,7 +24,9 @@ There is a great tutorial for that I found on YouTube (again if you are using Wi
 
 https://www.youtube.com/watch?v=dz59GsdvUF8&t=1s
 
- - run **poetry install --no-dev**
+ - clone it into a directory and open cmd at it
+
+ - run **poetry install --no-dev** 
 
  When you run it for the first time the program will ask you for your data and store it in secrets.json
  Every next time the program will read data from this file

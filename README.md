@@ -46,3 +46,13 @@ https://www.youtube.com/watch?v=dz59GsdvUF8&t=1s
 Running the program for the first time creates a new file called lastorder.txt and exits
 Every next usage it will do the same but also if it detects that any new orders have been added to the list
 it will email you the data of them such as clients information and shipment information
+
+---
+## Demonstration
+
+From command line:
+
+![](images/data.png)
+
+Email you receive:
+![](images/email3.png)

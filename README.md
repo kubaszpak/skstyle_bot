@@ -26,8 +26,9 @@ https://www.youtube.com/watch?v=dz59GsdvUF8&t=1s
 
  - clone it into a directory and open cmd at it
 
- - you can also download this project with **pip install skstyle-bot==0.1.1** and use with importlib
-   (sb = importlib.import_module("skstyle-bot") and sb.main())
+ - you can also download this project with **pip install skstyle-bot** and use with importlib
+  https://pypi.org/project/skstyle-bot/
+   (sb = importlib.import_module("skstyle-bot") and sb.main(), **poetry run main** and **poetry run set_data**)
 
  - run **poetry install --no-dev** 
 

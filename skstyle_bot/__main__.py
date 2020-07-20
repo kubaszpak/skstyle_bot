@@ -43,15 +43,15 @@ class Skstyle:
     def is_there_new_order(self):
         # checks if there is a new order
         # if you run it for the first time if returns None
-        data_folder = Path('skstyle_bot/')
-        file_to_open = data_folder / 'last_order.txt'
-        if(file_to_open.is_file() and os.stat(file_to_open).st_size != 0):
+        # data_folder = Path('skstyle_bot/')
+        file_to_open = 'last_order.txt'
+        if(os.path.isfile(file_to_open)):
             f = open(file_to_open, "r")
             last_printed_order = int(f.read())
             f.close()
         else:
             last_printed_order = None
-        f = open(file_to_open, "w+")
+        f = open(file_to_open, "w")
         latest_order = int(self.driver.find_element_by_xpath("/html/body/div[2]/form[2]/section[1]/div[2]/div[1]/div[2]").text)
         f.write(str(latest_order))
         f.close()
@@ -70,7 +70,6 @@ class Skstyle:
                
 
     def close(self):
-        self.driver.find_element_by_xpath("//a[class='fa fa-power-off important']").click()
         self.driver.quit()
 
 def main():

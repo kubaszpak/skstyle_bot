@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "skstyle_bot"
-version = "0.1.1"
-description = ""
+version = "0.1.3"
+description = "Selenium Bot for sstore admin panels"
 authors = ["kubaszpak <jakub.szpak.it@gmail.com>"]
 
 [tool.poetry.dependencies]

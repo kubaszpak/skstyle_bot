@@ -51,7 +51,7 @@ class Skstyle:
             f.close()
         else:
             last_printed_order = None
-        f = open(file_to_open, "w")
+        f = open(file_to_open, "w+")
         latest_order = int(self.driver.find_element_by_xpath("/html/body/div[2]/form[2]/section[1]/div[2]/div[1]/div[2]").text)
         f.write(str(latest_order))
         f.close()

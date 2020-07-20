@@ -3,7 +3,7 @@ import os
 from pathlib import Path
 
 def read_data_from_user(file_to_open):
-    with open(file_to_open,"w") as f:
+    with open(file_to_open,"w+") as f:
             login, password, email, domain, bot_email, bot_email_pw = input("Your login: "),\
                 input("Your password: "), input("Your email: "), input("Your domain: "), input("Your bot's email: "), input("Your bot's email's password: ")
             personal_data = {}

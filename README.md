@@ -2,7 +2,7 @@
 Python Bot for sstore domain webshops admin panel
 
 ---
-**Version 1.0.4**
+**Version 1.0.5**
 ---
 It works on sstore version 4.9.3
 
